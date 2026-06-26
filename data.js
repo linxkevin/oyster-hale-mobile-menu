@@ -49,15 +49,15 @@ const FOOD_MENU = [
     label: L("Starters", "前菜", "스타터", "前菜"),
     title: L("Starters", "前菜", "스타터", "前菜"),
     items: [
-      { name: "Ahi Poke", tags: ["Hawaii"], priceTiers: [{ label: "", price: 24 }], desc: L("Ahi, onion, green onion, sesame, wari shoyu, sesame oil, baby green, house mayo.", "アヒ・オニオン・青ねぎ・ごま・割り醬油・ごま油・ベビーグリーン・自家製マヨ。", "아히・양파・파・참깨・와리쇼유・참기름・베이비 그린・하우스 마요네즈.", "夏威夷生鱼・洋葱・青葱・芝麻・割り醬油・芝麻油・嫩叶菜・自制蛋黄酱。") },
-      { name: "Ahi Carpaccio", tags: ["Hawaii"], priceTiers: [{ label: "", price: 26 }], desc: L("Thinly sliced ahi, onion slice, house mayo, capers, black pepper, house blended ponzu.", "薄切りアヒ・オニオンスライス・自家製マヨ・ケッパー・黒胡椒・自家製ポン酢。", "얇게 썬 아히・양파 슬라이스・하우스 마요네즈・케이퍼・블랙 페퍼・하우스 블렌드 폰즈.", "薄切夏威夷生鱼・洋葱片・自制蛋黄酱・酸豆・黑胡椒・自调柚子醋。") },
+      { name: L("Ahi Poke", "アヒポキ", "아히 포케", "夏威夷波奇"), tags: ["Hawaii"], priceTiers: [{ label: "", price: 24 }], desc: L("Ahi, onion, green onion, sesame, wari shoyu, sesame oil, baby green, house mayo.", "アヒ・オニオン・青ねぎ・ごま・割り醬油・ごま油・ベビーグリーン・自家製マヨ。", "아히・양파・파・참깨・와리쇼유・참기름・베이비 그린・하우스 마요네즈.", "夏威夷生鱼・洋葱・青葱・芝麻・割り醬油・芝麻油・嫩叶菜・自制蛋黄酱。") },
+      { name: L("Ahi Carpaccio", "アヒカルパッチョ", "아히 카르파초", "夏威夷生鱼薄片"), tags: ["Hawaii"], priceTiers: [{ label: "", price: 26 }], desc: L("Thinly sliced ahi, onion slice, house mayo, capers, black pepper, house blended ponzu.", "薄切りアヒ・オニオンスライス・自家製マヨ・ケッパー・黒胡椒・自家製ポン酢。", "얇게 썬 아히・양파 슬라이스・하우스 마요네즈・케이퍼・블랙 페퍼・하우스 블렌드 폰즈.", "薄切夏威夷生鱼・洋葱片・自制蛋黄酱・酸豆・黑胡椒・自调柚子醋。") },
       { name: L("Hamachi Carpaccio", "ハマチカルパッチョ", "하마치 카르파초", "鰤鱼薄片"), star: true, tags: ["Japan"], priceTiers: [{ label: "", price: 25 }], desc: L("Hamachi, onion slice, tobiko, yuzu mayo, jalapeno, cilantro, house blended ponzu.", "ハマチ・オニオンスライス・とびこ・柚子マヨ・ハラペーニョ・パクチー・自家製ポン酢。", "하마치・양파 슬라이스・토비코・유즈 마요네즈・할라페뇨・고수・하우스 블렌드 폰즈.", "鰤鱼・洋葱片・飞鱼籽・柚子蛋黄酱・墨西哥辣椒・香菜・自调柚子醋。") },
-      { name: "Scallop Carpaccio", tags: ["Japan"], priceTiers: [{ label: "", price: 25 }], desc: L("Scallop, onion slice, ikura, house mayo, capers, black pepper, house blended ponzu.", "ホタテ・オニオンスライス・イクラ・自家製マヨ・ケッパー・黒胡椒・自家製ポン酢。", "스캘럽・양파 슬라이스・이쿠라・하우스 마요네즈・케이퍼・블랙 페퍼・하우스 블렌드 폰즈.", "扇贝・洋葱片・鲑鱼籽・自制蛋黄酱・酸豆・黑胡椒・自调柚子醋。") },
-      { name: "Ceviche", star: true, priceTiers: [{ label: "", price: 26 }], desc: L("Fresh seafood marinated in citrus dressing with onion, tomato, and cilantro jalapeno.", "新鮮なシーフードを、オニオン・トマト・パクチー・ハラペーニョと共に柑橘ドレッシングでマリネ。", "신선한 해산물을 양파・토마토・고수・할라페뇨와 함께 시트러스 드레싱에 마리네이드.", "新鲜海鲜以柑橘风味腌渍，搭配洋葱・番茄・香菜与墨西哥辣椒。") },
-      { name: "Tako Poke", tags: ["Japan"], priceTiers: [{ label: "", price: 24 }], desc: L("Tako, onion, green onion, shichimi, sesame oil, wari shoyu, baby green, house mayo.", "タコ・オニオン・青ねぎ・七味・ごま油・割り醬油・ベビーグリーン・自家製マヨ。", "문어・양파・파・시치미・참기름・와리쇼유・베이비 그린・하우스 마요네즈.", "章鱼・洋葱・青葱・七味粉・芝麻油・割り醬油・嫩叶菜・自制蛋黄酱。") },
-      { name: "Salmon Carpaccio", tags: ["Canada"], priceTiers: [{ label: "", price: 24 }], desc: L("Salmon, onion slice, ikura, house mayo, capers, black pepper, house blended ponzu.", "サーモン・オニオンスライス・イクラ・自家製マヨ・ケッパー・黒胡椒・自家製ポン酢。", "연어・양파 슬라이스・이쿠라・하우스 마요네즈・케이퍼・블랙 페퍼・하우스 블렌드 폰즈.", "鲑鱼・洋葱片・鲑鱼籽・自制蛋黄酱・酸豆・黑胡椒・自调柚子醋。") },
-      { name: "Negitoro Tartar", tags: ["Japan"], priceTiers: [{ label: "", price: 22 }], desc: L("Minced fatty tuna with scallion, prepared in a tartar style.", "刻んだ脂の乗ったマグロを、ねぎと共にタルタル仕立てで。", "다진 참치 뱃살을 파와 함께 타르타르 스타일로 준비했습니다.", "切碎的肥美吞拿鱼搭配葱花，以鞑靼风格呈现。") },
-      { name: "Ahi Poke Nachos", star: true, priceTiers: [{ label: "", price: 26 }], desc: L("Ahi poke, nachos, sweet sauce, jalapeno cilantro cheese sauce.", "アヒポキ・ナチョス・甘口ソース・ハラペーニョパクチーチーズソース。", "아히 포케・나초・스위트 소스・할라페뇨 실란트로 치즈 소스.", "夏威夷生鱼・玉米片・甜酱・墨西哥辣椒香菜芝士酱。") }
+      { name: L("Scallop Carpaccio", "ホタテカルパッチョ", "스캘럽 카르파초", "扇贝薄片"), tags: ["Japan"], priceTiers: [{ label: "", price: 25 }], desc: L("Scallop, onion slice, ikura, house mayo, capers, black pepper, house blended ponzu.", "ホタテ・オニオンスライス・イクラ・自家製マヨ・ケッパー・黒胡椒・自家製ポン酢。", "스캘럽・양파 슬라이스・이쿠라・하우스 마요네즈・케이퍼・블랙 페퍼・하우스 블렌드 폰즈.", "扇贝・洋葱片・鲑鱼籽・自制蛋黄酱・酸豆・黑胡椒・自调柚子醋。") },
+      { name: L("Ceviche", "セビーチェ", "세비체", "酸橘汁腌鱼"), star: true, priceTiers: [{ label: "", price: 26 }], desc: L("Fresh seafood marinated in citrus dressing with onion, tomato, and cilantro jalapeno.", "新鮮なシーフードを、オニオン・トマト・パクチー・ハラペーニョと共に柑橘ドレッシングでマリネ。", "신선한 해산물을 양파・토마토・고수・할라페뇨와 함께 시트러스 드레싱에 마리네이드.", "新鲜海鲜以柑橘风味腌渍，搭配洋葱・番茄・香菜与墨西哥辣椒。") },
+      { name: L("Tako Poke", "タコポキ", "타코 포케", "章鱼波奇"), tags: ["Japan"], priceTiers: [{ label: "", price: 24 }], desc: L("Tako, onion, green onion, shichimi, sesame oil, wari shoyu, baby green, house mayo.", "タコ・オニオン・青ねぎ・七味・ごま油・割り醬油・ベビーグリーン・自家製マヨ。", "문어・양파・파・시치미・참기름・와리쇼유・베이비 그린・하우스 마요네즈.", "章鱼・洋葱・青葱・七味粉・芝麻油・割り醬油・嫩叶菜・自制蛋黄酱。") },
+      { name: L("Salmon Carpaccio", "サーモンカルパッチョ", "연어 카르파초", "鲑鱼薄片"), tags: ["Canada"], priceTiers: [{ label: "", price: 24 }], desc: L("Salmon, onion slice, ikura, house mayo, capers, black pepper, house blended ponzu.", "サーモン・オニオンスライス・イクラ・自家製マヨ・ケッパー・黒胡椒・自家製ポン酢。", "연어・양파 슬라이스・이쿠라・하우스 마요네즈・케이퍼・블랙 페퍼・하우스 블렌드 폰즈.", "鲑鱼・洋葱片・鲑鱼籽・自制蛋黄酱・酸豆・黑胡椒・自调柚子醋。") },
+      { name: L("Negitoro Tartar", "ネギトロタルタル", "네기토로 타르타르", "葱花拖罗他他"), tags: ["Japan"], priceTiers: [{ label: "", price: 22 }], desc: L("Minced fatty tuna with scallion, prepared in a tartar style.", "刻んだ脂の乗ったマグロを、ねぎと共にタルタル仕立てで。", "다진 참치 뱃살을 파와 함께 타르타르 스타일로 준비했습니다.", "切碎的肥美吞拿鱼搭配葱花，以鞑靼风格呈现。") },
+      { name: L("Ahi Poke Nachos", "アヒポキナチョス", "아히 포케 나초", "夏威夷波奇玉米片"), star: true, priceTiers: [{ label: "", price: 26 }], desc: L("Ahi poke, nachos, sweet sauce, jalapeno cilantro cheese sauce.", "アヒポキ・ナチョス・甘口ソース・ハラペーニョパクチーチーズソース。", "아히 포케・나초・스위트 소스・할라페뇨 실란트로 치즈 소스.", "夏威夷生鱼・玉米片・甜酱・墨西哥辣椒香菜芝士酱。") }
     ]
   },
   {
@@ -66,11 +66,11 @@ const FOOD_MENU = [
     title: L("Sashimi", "刺身", "사시미", "生鱼片"),
     note: L("Add rice +4", "ライス追加 +4", "라이스 추가 +4", "加米饭 +4"),
     items: [
-      { name: "Ahi (Tuna)", star: true, desc: L("Hawaii — caught fresh locally", "ハワイ — 地元で水揚げされた新鮮なもの", "하와이 — 현지에서 갓 잡은 신선한 참치", "夏威夷 — 当地新鲜捕获"), priceTiers: [{ label: "", price: 26 }] },
-      { name: "Hamachi (Yellowtail)", star: true, desc: L("Japan — premium imported", "日本 — 高級輸入品", "일본 — 프리미엄 수입", "日本 — 高级进口"), priceTiers: [{ label: "", price: 26 }] },
-      { name: "Scallop", desc: L("Japan — premium imported", "日本 — 高級輸入品", "일본 — 프리미엄 수입", "日本 — 高级进口"), priceTiers: [{ label: "", price: 24 }] },
-      { name: "Tako (Octopus)", desc: L("Japan — premium imported", "日本 — 高級輸入品", "일본 — 프리미엄 수입", "日本 — 高级进口"), priceTiers: [{ label: "", price: 24 }] },
-      { name: "Salmon", desc: L("Canada — Atlantic fresh", "カナダ — 大西洋の新鮮なサーモン", "캐나다 — 대서양산 신선한 연어", "加拿大 — 大西洋新鲜直送"), priceTiers: [{ label: "", price: 24 }] },
+      { name: L("Ahi (Tuna)", "アヒ", "아히", "吞拿鱼"), star: true, desc: L("Hawaii — caught fresh locally", "ハワイ — 地元で水揚げされた新鮮なもの", "하와이 — 현지에서 갓 잡은 신선한 참치", "夏威夷 — 当地新鲜捕获"), priceTiers: [{ label: "", price: 26 }] },
+      { name: L("Hamachi (Yellowtail)", "ハマチ", "하마치", "鰤鱼"), star: true, desc: L("Japan — premium imported", "日本 — 高級輸入品", "일본 — 프리미엄 수입", "日本 — 高级进口"), priceTiers: [{ label: "", price: 26 }] },
+      { name: L("Scallop", "ホタテ", "스캘럽", "扇贝"), desc: L("Japan — premium imported", "日本 — 高級輸入品", "일본 — 프리미엄 수입", "日本 — 高级进口"), priceTiers: [{ label: "", price: 24 }] },
+      { name: L("Tako (Octopus)", "タコ", "타코", "章鱼"), desc: L("Japan — premium imported", "日本 — 高級輸入品", "일본 — 프리미엄 수입", "日本 — 高级进口"), priceTiers: [{ label: "", price: 24 }] },
+      { name: L("Salmon", "サーモン", "연어", "鲑鱼"), desc: L("Canada — Atlantic fresh", "カナダ — 大西洋の新鮮なサーモン", "캐나다 — 대서양산 신선한 연어", "加拿大 — 大西洋新鲜直送"), priceTiers: [{ label: "", price: 24 }] },
       { name: L("Assorted (3 Kinds)", "盛り合わせ（3種）", "모음（3종）", "拼盘（3种）"), desc: L("Tuna, salmon and hamachi, 2pc each.", "マグロ・サーモン・ハマチを各2枚。", "참치・연어・하마치 각 2점.", "吞拿鱼・鲑鱼・鰤鱼各2片。"), priceTiers: [{ label: "", price: 36 }] },
       { name: L("Deluxe", "デラックス", "디럭스", "豪华版"), star: true, desc: L("Tuna, salmon, hamachi, tako, uni and ikura.", "マグロ・サーモン・ハマチ・タコ・ウニ・イクラ。", "참치・연어・하마치・문어・우니・이쿠라.", "吞拿鱼・鲑鱼・鰤鱼・章鱼・海胆・鲑鱼籽。"), priceTiers: [{ label: "", price: 48 }] }
     ],
@@ -81,11 +81,11 @@ const FOOD_MENU = [
     label: L("Sushi Rolls", "寿司ロール", "스시 롤", "寿司卷"),
     title: L("Sushi Roll", "寿司ロール", "스시 롤", "寿司卷"),
     items: [
-      { name: "Volcano Roll", priceTiers: [{ label: "", price: 22 }], desc: L("California roll, spicy tuna, eel sauce and spicy mayo.", "カリフォルニアロールにスパイシーツナ・うなぎソース・スパイシーマヨを添えて。", "캘리포니아 롤에 스파이시 참치・장어 소스・스파이시 마요네즈를 더했습니다.", "加州卷搭配香辣吞拿鱼・鳗鱼酱与香辣蛋黄酱。") },
-      { name: "Waikiki Roll", priceTiers: [{ label: "", price: 25 }], desc: L("California roll, salmon, ikura and house mayo.", "カリフォルニアロールにサーモン・イクラ・自家製マヨを添えて。", "캘리포니아 롤에 연어・이쿠라・하우스 마요네즈를 더했습니다.", "加州卷搭配鲑鱼・鲑鱼籽与自制蛋黄酱。") },
-      { name: "Aloha Roll", priceTiers: [{ label: "", price: 28 }], desc: L("California roll, seared hamachi, avocado, eel sauce, jalapeno, tobiko.", "カリフォルニアロールに炙りハマチ・アボカド・うなぎソース・ハラペーニョ・とびこを添えて。", "캘리포니아 롤에 시어드 하마치・아보카도・장어 소스・할라페뇨・토비코를 더했습니다.", "加州卷搭配香煎鰤鱼・牛油果・鳗鱼酱・墨西哥辣椒与飞鱼籽。") },
-      { name: "Diamond Head Roll", star: true, priceTiers: [{ label: "", price: 32 }], desc: L("Spicy tuna roll, uni and caviar on top.", "スパイシーツナロールに、ウニとキャビアをトッピング。", "스파이시 참치 롤에 우니와 캐비어를 올렸습니다.", "香辣吞拿鱼卷，上铺海胆与鱼子酱。") },
-      { name: "Hale Supreme Roll", star: true, priceTiers: [{ label: "", price: 38 }], desc: L("Our most luxurious roll — uni, ikura, caviar, negitoro and wagyu, finished with gold leaf.", "当店最高級のロール — ウニ・イクラ・キャビア・ネギトロ・和牛に、金箔を添えて。", "가장 고급스러운 롤 — 우니・이쿠라・캐비어・네기토로・와규에 금박을 더했습니다.", "我们最奢华的卷物 — 海胆・鲑鱼籽・鱼子酱・葱花拖罗与和牛，并饰以金箔。") }
+      { name: L("Volcano Roll", "ヴォルケーノロール", "볼케이노 롤", "火山卷"), priceTiers: [{ label: "", price: 22 }], desc: L("California roll, spicy tuna, eel sauce and spicy mayo.", "カリフォルニアロールにスパイシーツナ・うなぎソース・スパイシーマヨを添えて。", "캘리포니아 롤에 스파이시 참치・장어 소스・스파이시 마요네즈를 더했습니다.", "加州卷搭配香辣吞拿鱼・鳗鱼酱与香辣蛋黄酱。") },
+      { name: L("Waikiki Roll", "ワイキキロール", "와이키키 롤", "威基基卷"), priceTiers: [{ label: "", price: 25 }], desc: L("California roll, salmon, ikura and house mayo.", "カリフォルニアロールにサーモン・イクラ・自家製マヨを添えて。", "캘리포니아 롤에 연어・이쿠라・하우스 마요네즈를 더했습니다.", "加州卷搭配鲑鱼・鲑鱼籽与自制蛋黄酱。") },
+      { name: L("Aloha Roll", "アロハロール", "알로하 롤", "阿罗哈卷"), priceTiers: [{ label: "", price: 28 }], desc: L("California roll, seared hamachi, avocado, eel sauce, jalapeno, tobiko.", "カリフォルニアロールに炙りハマチ・アボカド・うなぎソース・ハラペーニョ・とびこを添えて。", "캘리포니아 롤에 시어드 하마치・아보카도・장어 소스・할라페뇨・토비코를 더했습니다.", "加州卷搭配香煎鰤鱼・牛油果・鳗鱼酱・墨西哥辣椒与飞鱼籽。") },
+      { name: L("Diamond Head Roll", "ダイヤモンドヘッドロール", "다이아몬드 헤드 롤", "钻石头卷"), star: true, priceTiers: [{ label: "", price: 32 }], desc: L("Spicy tuna roll, uni and caviar on top.", "スパイシーツナロールに、ウニとキャビアをトッピング。", "스파이시 참치 롤에 우니와 캐비어를 올렸습니다.", "香辣吞拿鱼卷，上铺海胆与鱼子酱。") },
+      { name: L("Hale Supreme Roll", "ハレ スプリームロール", "할레 수프림 롤", "Hale至尊卷"), star: true, priceTiers: [{ label: "", price: 38 }], desc: L("Our most luxurious roll — uni, ikura, caviar, negitoro and wagyu, finished with gold leaf.", "当店最高級のロール — ウニ・イクラ・キャビア・ネギトロ・和牛に、金箔を添えて。", "가장 고급스러운 롤 — 우니・이쿠라・캐비어・네기토로・와규에 금박을 더했습니다.", "我们最奢华的卷物 — 海胆・鲑鱼籽・鱼子酱・葱花拖罗与和牛，并饰以金箔。") }
     ]
   },
   {
