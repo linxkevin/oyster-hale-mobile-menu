@@ -1,0 +1,12 @@
+{
+  "name": "oyster-hale-mobile-menu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mobile menu for Oyster Hale by Crush — scan-to-view via QR code",
+  "scripts": {
+    "start": "serve -s . -l ${PORT:-3000}"
+  },
+  "dependencies": {
+    "serve": "^14.2.6"
+  }
+}
