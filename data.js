@@ -35,11 +35,11 @@ const FOOD_MENU = [
     id: "special-oyster",
     label: L("Special Oysters", "スペシャルオイスター", "스페셜 오이스터", "特色生蚝"),
     title: L("Special Oyster Menu", "スペシャルオイスターメニュー", "스페셜 오이스터 메뉴", "特色生蚝菜单"),
-    subtitle: L("Only at Oyster Hale · limited", "Oyster Haleだけの限定メニュー", "오이스터 헤일에서만・한정", "仅在Oyster Hale供应・限量"),
+    subtitle: L("Only at Oyster Hale · limited", "Oyster Haleだけの限定メニュー", "오이스터 할레에서만・한정", "仅在Oyster Hale供应・限量"),
     items: [
       { name: L("Oyster Supreme", "オイスタースプリーム", "오이스터 수프림", "至尊生蚝"), star: true, priceTiers: [{ label: "", price: 38 }], desc: L("3pc raw oysters topped with uni, ikura, caviar, negitoro and house blended sauce.", "生牡蠣3個に、ウニ・イクラ・キャビア・ネギトロと自家製ブレンドソースをトッピング。", "생오이스터 3개에 우니・이쿠라・캐비어・네기토로와 하우스 블렌드 소스를 올렸습니다.", "3只生蚝，配以海胆・鲑鱼籽・鱼子酱・葱花拖罗及自调酱汁。") },
       { name: L("Oyster Lovers", "オイスターラバーズ", "오이스터 러버즈", "生蚝爱好者"), priceTiers: [{ label: "", price: 34 }], desc: L("3pc raw oysters plus 3pc oyster combination shooters.", "生牡蠣3個と、コンビネーションショット3杯のセット。", "생오이스터 3개와 콤비네이션 샷 3개로 구성.", "3只生蚝搭配3杯组合特调。") },
-      { name: L("Oyster Hale Special", "オイスターヘイル スペシャル", "오이스터 헤일 스페셜", "Oyster Hale特制"), star: true, priceTiers: [{ label: "", price: 32 }], desc: L("Spicy sizzling oyster — served hot and sizzling. Bold, flavorful, and full of aroma.", "ジュージューと熱々でお届けするスパイシーオイスター。力強い旨みと豊かな香り。", "뜨겁고 지글지글한 스파이시 오이스터. 강렬한 풍미와 진한 향이 가득합니다.", "香辣滋滋作响的热制生蚝，风味浓郁、香气十足。") },
+      { name: L("Oyster Hale Special", "オイスターハレ スペシャル", "오이스터 할레 스페셜", "Oyster Hale特制"), star: true, priceTiers: [{ label: "", price: 32 }], desc: L("Spicy sizzling oyster — served hot and sizzling. Bold, flavorful, and full of aroma.", "ジュージューと熱々でお届けするスパイシーオイスター。力強い旨みと豊かな香り。", "뜨겁고 지글지글한 스파이시 오이스터. 강렬한 풍미와 진한 향이 가득합니다.", "香辣滋滋作响的热制生蚝，风味浓郁、香气十足。") },
       { name: L("Alfred Oyster", "アルフレッドオイスター", "알프레도 오이스터", "白汁生蚝"), priceTiers: [{ label: "3pc", price: 22 }, { label: "6pc", price: 40 }], desc: L("Baked with Alfred sauce and Japanese aosa seaweed — crispy, savory, with oceanic depth.", "アルフレッドソースと青のりで焼き上げた、香ばしく旨み深い一品。", "알프레도 소스와 일본식 아오사 김으로 구워내 바삭하고 깊은 풍미를 더했습니다.", "以白汁酱与日本青海苔烤制，外脆内嫩，海洋风味浓厚。") },
       { name: L("Miso Yaki Oyster", "味噌焼き牡蠣", "미소야키 오이스터", "味噌烤生蚝"), priceTiers: [{ label: "", price: 32 }], desc: L("Baked oysters glazed with house miso — savory, slightly sweet, deeply umami.", "自家製味噌を纏わせて焼き上げた牡蠣。甘みと旨みが深く広がります。", "하우스 미소를 발라 구운 오이스터. 짭짤하고 약간 달며 깊은 감칠맛이 느껴집니다.", "刷上自制味噌烤制，咸甜交融，鲜味浓郁。") }
     ]

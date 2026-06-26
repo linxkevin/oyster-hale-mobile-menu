@@ -320,7 +320,7 @@
   var SPLASH_RECS = [
     { label: L("Oysters", "オイスター", "오이스터", "生蚝"), desc: L("Raw, baked, or our signature shooters.", "生牡蠣・グリル・名物のショットスタイルまで。", "생, 구운 것, 그리고 시그니처 샷 스타일까지.", "生食、烤制，或我们招牌的一口生蚝特调。"), menu: "food", cat: "raw-oyster" },
     { label: L("Starters", "前菜", "스타터", "前菜"), desc: L("Carpaccio, poke, and ceviche to share.", "カルパッチョ・ポキ・セビーチェをシェアして。", "카르파초, 포케, 세비체를 함께 나눠보세요.", "卡帕乔、波奇沙拉、酸橘汁腌鱼，一起分享。"), menu: "food", cat: "starters" },
-    { label: L("Sushi rolls", "寿司ロール", "스시 롤", "寿司卷"), desc: L("From the Volcano Roll to Hale Supreme.", "ヴォルケーノロールからHale Supremeまで。", "볼케이노 롤부터 헤일 수프림까지.", "从火山卷到Hale Supreme，应有尽有。"), menu: "food", cat: "sushi-roll" }
+    { label: L("Sushi rolls", "寿司ロール", "스시 롤", "寿司卷"), desc: L("From the Volcano Roll to Hale Supreme.", "ヴォルケーノロールからHale Supremeまで。", "볼케이노 롤부터 할레 수프림까지.", "从火山卷到Hale Supreme，应有尽有。"), menu: "food", cat: "sushi-roll" }
   ];
 
   var LANG_PROMPTS = ["en", "ja", "ko", "zh"].map(function (code) { return UI_STRINGS["lang.prompt"][code]; });
