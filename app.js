@@ -356,7 +356,7 @@
       );
     }
     if (slide.kind === "title") {
-      return '<div class="slide-eyebrow">' + t(UI_STRINGS[slide.eyebrowKey]) + '</div><div class="slide-title serif">' + slide.title + "</div>";
+      return '<div class="slide-eyebrow">' + t(UI_STRINGS[slide.eyebrowKey]) + '</div><div class="slide-title serif">' + slide.title + '</div><div class="slide-byline">by Crush</div>';
     }
     if (slide.kind === "line") {
       return '<div class="slide-line serif">' + t(slide.text) + "</div>";

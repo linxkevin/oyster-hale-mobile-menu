@@ -122,9 +122,13 @@ main[hidden]{display:none;}
 }
 .hero h1{
   font-family:'Playfair Display',serif;font-weight:700;
-  font-size:38px;line-height:1.05;margin:0 0 12px;position:relative;
+  font-size:38px;line-height:1.05;margin:0 0 4px;position:relative;
 }
 .hero h1 em{color:var(--gold);font-style:italic;font-weight:600;}
+.hero .byline{
+  font-size:11px;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;
+  color:var(--pearl-faint);margin:0 0 14px;position:relative;
+}
 .hero p{
   font-size:14px;color:var(--pearl-dim);max-width:420px;margin:0 0 16px;position:relative;
 }
@@ -326,6 +330,10 @@ main[hidden]{display:none;}
 .slide-eyebrow{font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:16px;}
 .slide-title{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(40px,13vw,60px);color:var(--pearl);line-height:1.05;}
 .slide-title em{color:var(--gold);font-style:italic;}
+.slide-byline{
+  font-size:13px;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;
+  color:var(--pearl-faint);margin-top:10px;
+}
 .slide-line{font-family:'Playfair Display',serif;font-style:italic;font-weight:500;color:var(--pearl);font-size:clamp(27px,7.8vw,39px);line-height:1.32;}
 .slide-line .q{color:var(--gold);font-style:normal;font-size:1.15em;}
 
@@ -407,6 +415,7 @@ main[hidden]{display:none;}
   <section class="hero">
     <div class="hero-eyebrow" data-i18n="hero.food.eyebrow">Honolulu's finest oyster bar</div>
     <h1 class="serif">Oyster <em>Hale</em></h1>
+    <div class="byline">by Crush</div>
     <p data-i18n="hero.food.tagline">These oysters are so fresh, they practically swim to your table. Tap any price to start building your order.</p>
     <span class="hint">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
