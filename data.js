@@ -238,6 +238,7 @@ const DRINKS_MENU = [
       { name: "Cataclysm Chardonnay", tags: ["Columbia Valley, WA"], priceTiers: [{ label: "", price: 38 }] },
       { name: "Matanzas Creek Sauvignon Blanc", tags: ["Sonoma, CA"], priceTiers: [{ label: "", price: 68 }] },
       { name: "Vionta Albari\u00f1o", tags: ["Rias Baixas, Spain"], priceTiers: [{ label: "", price: 70 }] },
+      { name: "La Chablisienne Chablis", tags: ["France"], priceTiers: [{ label: "", price: 80 }] },
       { name: L("Glass Wine", "グラスワイン", "글라스 와인", "杯装葡萄酒"), desc: L("Ask your server for today's by-the-glass pour.", "本日のグラスワインはスタッフにお尋ねください。", "오늘의 글라스 와인은 서버에게 문의해 주세요.", "请向服务员询问今日的杯装葡萄酒选择。"), priceTiers: [{ label: "", price: 9 }] },
       { name: "Oyster Bay Pinot Noir", tags: ["New Zealand"], priceTiers: [{ label: "", price: 44 }] },
       { name: "Benvolio Prosecco Sparkling", tags: ["Italy"], priceTiers: [{ label: "", price: 42 }] },
