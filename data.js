@@ -256,7 +256,8 @@ const DRINKS_MENU = [
       { name: "Big Swell IPA", unit: L("draft", "ドラフト", "드래프트", "生啤"), tags: ["Local"], priceTiers: [{ label: "", price: 9.5 }] },
       { name: "Da Hawaii Life Lite Lager", unit: L("12oz", "12オンス", "12oz", "12盎司"), tags: ["Local"], priceTiers: [{ label: "", price: 5 }] },
       { name: "Kewalo's Cream Ale", unit: L("12oz", "12オンス", "12oz", "12盎司"), tags: ["Local"], priceTiers: [{ label: "", price: 6.5 }] },
-      { name: "Point Panic Pale Ale", unit: L("12oz", "12オンス", "12oz", "12盎司"), tags: ["Local"], priceTiers: [{ label: "", price: 7 }] }
+      { name: "Point Panic Pale Ale", unit: L("12oz", "12オンス", "12oz", "12盎司"), tags: ["Local"], priceTiers: [{ label: "", price: 7 }] },
+      { name: L("Heineken Non-Alcoholic", "ハイネケン ノンアルコール", "하이네켄 논알코올", "海尼根无醇啤酒"), priceTiers: [{ label: "", price: 5 }] }
     ]
   },
   {
