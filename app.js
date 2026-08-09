@@ -52,6 +52,7 @@
             var key = pillKey(menuId, cat.id, nameText, tier.label);
             var lbl = tierText ? '<span class="lbl">' + tierText + "</span>" : "";
             var unitForData = tierText || t(item.unit) || "";
+            var nameEn = (typeof item.name === 'object' && item.name.en) ? item.name.en : nameText;
             return (
               '<button class="price-pill" data-key="' +
               escapeAttr(key) +
@@ -63,6 +64,8 @@
               escapeAttr(t(cat.label)) +
               '" data-name="' +
               escapeAttr(nameText) +
+              '" data-name-en="' +
+              escapeAttr(nameEn) +
               '" data-unit="' +
               escapeAttr(unitForData) +
               '" data-price="' +
@@ -178,6 +181,7 @@
       picks.push({
         key: key,
         name: pill.dataset.name,
+        nameEn: pill.dataset.nameEn || pill.dataset.name,
         unit: pill.dataset.unit,
         price: parseFloat(pill.dataset.price),
         catLabel: pill.dataset.catlabel
@@ -217,10 +221,12 @@
     }
     list.innerHTML = picks
       .map(function (p) {
+        var showEnSub = CURRENT_LANG !== "en" && p.nameEn && p.nameEn !== p.name;
         return (
           '<div class="sheet-item">' +
           '<div><div class="si-name">' +
           p.name +
+          (showEnSub ? '<div class="si-name-en">' + p.nameEn + '</div>' : '') +
           "</div>" +
           '<div class="si-cat">' +
           p.catLabel +
