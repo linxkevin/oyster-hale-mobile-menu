@@ -243,6 +243,7 @@ const DRINKS_MENU = [
       { name: "Oyster Bay Pinot Noir", tags: ["New Zealand"], priceTiers: [{ label: "", price: 44 }] },
       { name: "Benvolio Prosecco Sparkling", tags: ["Italy"], priceTiers: [{ label: "", price: 42 }] },
       { name: "Chandon Brut", tags: ["Napa, CA"], priceTiers: [{ label: "", price: 62 }] },
+      { name: "Mo\u00ebt & Chandon Champagne Brut Imp\u00e9rial", tags: ["France"], priceTiers: [{ label: "", price: 120 }] },
       { name: "Veuve Clicquot Champagne Brut", tags: ["France"], priceTiers: [{ label: "", price: 128 }] },
       { name: L("House Wine", "ハウスワイン", "하우스 와인", "招牌葡萄酒"), unit: L("white or red, glass", "白または赤、グラス", "화이트 또는 레드, 글라스", "白或红，杯装"), priceTiers: [{ label: "", price: 10 }] }
     ]
