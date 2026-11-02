@@ -254,7 +254,7 @@ const DRINKS_MENU = [
     title: L("Beer", "ビール", "맥주", "啤酒"),
     items: [
       { name: "Kirin Ichiban", unit: L("draft", "ドラフト", "드래프트", "生啤"), priceTiers: [{ label: "", price: 7 }] },
-      { name: "Big Swell IPA", unit: L("draft", "ドラフト", "드래프트", "生啤"), tags: ["Local"], priceTiers: [{ label: "", price: 9.5 }] },
+      { name: "Orion Beer", unit: L("draft", "ドラフト", "드래프트", "生啤"), priceTiers: [{ label: "", price: 8 }] },
       { name: "Da Hawaii Life Lite Lager", unit: L("12oz", "12オンス", "12oz", "12盎司"), tags: ["Local"], priceTiers: [{ label: "", price: 5 }] },
       { name: "Kewalo's Cream Ale", unit: L("12oz", "12オンス", "12oz", "12盎司"), tags: ["Local"], priceTiers: [{ label: "", price: 6.5 }] },
       { name: "Point Panic Pale Ale", unit: L("12oz", "12オンス", "12oz", "12盎司"), tags: ["Local"], priceTiers: [{ label: "", price: 7 }] },
