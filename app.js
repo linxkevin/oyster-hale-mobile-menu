@@ -37,7 +37,16 @@
 
   function renderItem(menuId, cat, item) {
     var nameText = t(item.name);
-    var nameBits = (item.star ? '<span class="star">\u2605</span> ' : "") + nameText;
+    var hasPhoto = !!item.imageUrl;
+    var photoIcon = hasPhoto
+      ? '<span class="photo-icon" data-photo-item="1" title="View photo">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">' +
+        '<rect x="3" y="5" width="18" height="14" rx="2"/>' +
+        '<circle cx="12" cy="12" r="3"/>' +
+        '<path d="M9 5l1.5-2h3L15 5"/>' +
+        '</svg></span>'
+      : '';
+    var nameBits = (item.star ? '<span class="star">\u2605</span> ' : "") + nameText + photoIcon;
     if (item.unit) nameBits += ' <span class="unit">\u00b7 ' + t(item.unit) + "</span>";
 
     var priceHtml = "";
@@ -86,7 +95,11 @@
     return (
       '<div class="card' +
       (item.star ? " featured" : "") +
-      '">' +
+      '"' +
+      (item.imageUrl ? ' data-image-url="' + escapeAttr(item.imageUrl) + '"' : '') +
+      ' data-item-name="' + escapeAttr(nameText) + '"' +
+      ' data-item-desc="' + escapeAttr(t(item.desc) || '') + '"' +
+      '>' +
       '<div class="card-top"><div class="card-name">' +
       nameBits +
       "</div></div>" +
@@ -540,6 +553,82 @@
       picks = picks.filter(function (p) { return p.key !== key; });
       syncAllPillsForKey(key);
       renderPicksBar();
+    });
+
+    // ── Photo Popup ───────────────────────────────────────────
+    var currentPhotoItem = null;
+
+    function openPhotoPopup(card) {
+      var popup   = document.getElementById("photoPopup");
+      var imgWrap = document.getElementById("photoPopupImgWrap");
+      var nameEl  = document.getElementById("photoPopupName");
+      var descEl  = document.getElementById("photoPopupDesc");
+      var actions = document.getElementById("photoPopupActions");
+
+      var imageUrl = card.dataset.imageUrl;
+      var name     = card.dataset.itemName;
+      var desc     = card.dataset.itemDesc;
+      currentPhotoItem = card;
+
+      // Image area
+      var closeBtn = '<button class="photo-popup-close" id="photoPopupClose" aria-label="Close">' +
+        '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg></button>';
+      if (imageUrl) {
+        imgWrap.innerHTML = closeBtn + '<img src="' + imageUrl + '" alt="' + escapeAttr(name) + '">';
+      } else {
+        imgWrap.innerHTML = closeBtn +
+          '<div class="photo-popup-placeholder">' +
+          '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M9 5l1.5-2h3L15 5"/></svg>' +
+          '<span>No photo yet</span></div>';
+      }
+      document.getElementById("photoPopupClose").addEventListener("click", closePhotoPopup);
+
+      nameEl.textContent = name;
+      descEl.textContent = desc;
+
+      // Price buttons — clone from the card
+      var pills = card.querySelectorAll(".price-pill");
+      actions.innerHTML = "";
+      pills.forEach(function (pill) {
+        var btn = document.createElement("button");
+        btn.className = "price-pill" + (pill.classList.contains("added") ? " added" : "");
+        btn.innerHTML = pill.innerHTML;
+        btn.dataset.key      = pill.dataset.key;
+        btn.dataset.menu     = pill.dataset.menu;
+        btn.dataset.cat      = pill.dataset.cat;
+        btn.dataset.catlabel = pill.dataset.catlabel;
+        btn.dataset.name     = pill.dataset.name;
+        btn.dataset.nameEn   = pill.dataset.nameEn || pill.dataset.name;
+        btn.dataset.unit     = pill.dataset.unit;
+        btn.dataset.price    = pill.dataset.price;
+        btn.addEventListener("click", function () {
+          togglePick(btn);
+          // sync state back to card pill
+          var cardPill = card.querySelector('.price-pill[data-key="' + btn.dataset.key + '"]');
+          if (cardPill) cardPill.classList.toggle("added", btn.classList.contains("added"));
+        });
+        actions.appendChild(btn);
+      });
+
+      popup.classList.add("show");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closePhotoPopup() {
+      document.getElementById("photoPopup").classList.remove("show");
+      document.body.style.overflow = "";
+      currentPhotoItem = null;
+    }
+
+    document.getElementById("photoPopupScrim").addEventListener("click", closePhotoPopup);
+
+    // Delegate: photo icon click → open popup
+    document.addEventListener("click", function (e) {
+      var icon = e.target.closest(".photo-icon");
+      if (!icon) return;
+      e.stopPropagation();
+      var card = icon.closest(".card");
+      if (card) openPhotoPopup(card);
     });
   });
 })();
